@@ -5,6 +5,9 @@
 
 .container {
   text-align: center;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: minmax(0,1fr) minmax(0,4fr);
 }
 
 .container div {
@@ -17,6 +20,9 @@
 
 .header {
   background-color: #393f4d;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
 }
 
 .menu ul,
@@ -88,4 +94,57 @@
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+
+.menu ul{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sidebar{
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
+  grid-column: 1 / 2;
+}
+
+.side-content, .photo{
+  display: grid;
+  align-items: center;
+}
+
+.article{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card{
+  height: 200px;
+}
+
+.header, .footer{
+  grid-column:  1 / -1;
+}
+
+
+.nav, .article{
+  grid-column: 2 / -1;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.logo{
+  justify-self: start;
+}
+
+.menu{
+  align-self: center;
 }
